@@ -1,0 +1,20 @@
+# dataset (manual copies, if any); data/.gitkeep stays tracked
+data/CamVid
+
+# model checkpoints
+*.pt
+*.pth
+
+# python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# environments / secrets
+.venv/
+.env
+kaggle.json
+
+# OS
+.DS_Store
+Thumbs.db
