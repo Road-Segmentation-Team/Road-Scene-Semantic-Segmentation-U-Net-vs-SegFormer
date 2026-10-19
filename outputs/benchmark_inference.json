@@ -1,0 +1,33 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "resolution_hw": [
+    360,
+    480
+  ],
+  "batch_size": 1,
+  "warmup": 20,
+  "iterations": 100,
+  "timing_scope": "GPU forward, full-resolution logits and argmax; excludes image I/O/preprocessing",
+  "data_split": "validation",
+  "results": [
+    {
+      "model": "U-Net (ResNet-34)",
+      "mean_ms": 13.158,
+      "median_ms": 12.386,
+      "p95_ms": 18.581,
+      "fps": 76.0,
+      "parameters_m": 24.437,
+      "peak_allocated_mib": 196.1
+    },
+    {
+      "model": "SegFormer-B0",
+      "mean_ms": 10.627,
+      "median_ms": 9.196,
+      "p95_ms": 15.234,
+      "fps": 94.1,
+      "parameters_m": 3.715,
+      "peak_allocated_mib": 239.4
+    }
+  ]
+}

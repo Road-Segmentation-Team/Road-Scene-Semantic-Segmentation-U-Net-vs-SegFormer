@@ -1,0 +1,562 @@
+[
+  {
+    "epoch": 1,
+    "train_weighted_ce": 0.885875989032048,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.6393241882324219,
+    "val_pixel_accuracy": 0.9314385056495667,
+    "per_class_iou": {
+      "road": 0.9587771892547607,
+      "vehicle": 0.4416494369506836,
+      "building": 0.8492107391357422,
+      "pedestrian": 0.0022349776700139046,
+      "sky": 0.9447486996650696
+    }
+  },
+  {
+    "epoch": 2,
+    "train_weighted_ce": 0.46137009448902583,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.7074699997901917,
+    "val_pixel_accuracy": 0.9487324953079224,
+    "per_class_iou": {
+      "road": 0.9619160890579224,
+      "vehicle": 0.6264204382896423,
+      "building": 0.8978075981140137,
+      "pedestrian": 0.10318590700626373,
+      "sky": 0.9480199217796326
+    }
+  },
+  {
+    "epoch": 3,
+    "train_weighted_ce": 0.3312996209308665,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.7603527903556824,
+    "val_pixel_accuracy": 0.9560039639472961,
+    "per_class_iou": {
+      "road": 0.9675626158714294,
+      "vehicle": 0.6939845681190491,
+      "building": 0.9090400338172913,
+      "pedestrian": 0.2796931862831116,
+      "sky": 0.9514834880828857
+    }
+  },
+  {
+    "epoch": 4,
+    "train_weighted_ce": 0.26125213503837585,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.797768771648407,
+    "val_pixel_accuracy": 0.9622342586517334,
+    "per_class_iou": {
+      "road": 0.9730988144874573,
+      "vehicle": 0.7336313724517822,
+      "building": 0.9208214282989502,
+      "pedestrian": 0.4020019471645355,
+      "sky": 0.9592903256416321
+    }
+  },
+  {
+    "epoch": 5,
+    "train_weighted_ce": 0.22277967599771356,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8215813040733337,
+    "val_pixel_accuracy": 0.9645833969116211,
+    "per_class_iou": {
+      "road": 0.9759032130241394,
+      "vehicle": 0.7616724371910095,
+      "building": 0.9262269139289856,
+      "pedestrian": 0.4876035451889038,
+      "sky": 0.9565004706382751
+    }
+  },
+  {
+    "epoch": 6,
+    "train_weighted_ce": 0.1863813558893819,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8322538733482361,
+    "val_pixel_accuracy": 0.9679164886474609,
+    "per_class_iou": {
+      "road": 0.9777471423149109,
+      "vehicle": 0.7767759561538696,
+      "building": 0.9334220886230469,
+      "pedestrian": 0.5089362859725952,
+      "sky": 0.9643874168395996
+    }
+  },
+  {
+    "epoch": 7,
+    "train_weighted_ce": 0.162050419436988,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8364588618278503,
+    "val_pixel_accuracy": 0.9689388275146484,
+    "per_class_iou": {
+      "road": 0.9790148138999939,
+      "vehicle": 0.7832150459289551,
+      "building": 0.9349911212921143,
+      "pedestrian": 0.5199579000473022,
+      "sky": 0.9651153683662415
+    }
+  },
+  {
+    "epoch": 8,
+    "train_weighted_ce": 0.14779180841099832,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8458089828491211,
+    "val_pixel_accuracy": 0.9705008268356323,
+    "per_class_iou": {
+      "road": 0.9803453087806702,
+      "vehicle": 0.7945860624313354,
+      "building": 0.9382727146148682,
+      "pedestrian": 0.5492909550666809,
+      "sky": 0.966549813747406
+    }
+  },
+  {
+    "epoch": 9,
+    "train_weighted_ce": 0.13466411500528294,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8491183519363403,
+    "val_pixel_accuracy": 0.9711226224899292,
+    "per_class_iou": {
+      "road": 0.9806284308433533,
+      "vehicle": 0.7985417246818542,
+      "building": 0.939315915107727,
+      "pedestrian": 0.5591914653778076,
+      "sky": 0.9679139852523804
+    }
+  },
+  {
+    "epoch": 10,
+    "train_weighted_ce": 0.12510216436398927,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8513874411582947,
+    "val_pixel_accuracy": 0.971948504447937,
+    "per_class_iou": {
+      "road": 0.9812036752700806,
+      "vehicle": 0.8031166195869446,
+      "building": 0.9409536719322205,
+      "pedestrian": 0.5614405274391174,
+      "sky": 0.9702224135398865
+    }
+  },
+  {
+    "epoch": 11,
+    "train_weighted_ce": 0.11932117700256327,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8541440367698669,
+    "val_pixel_accuracy": 0.9722414612770081,
+    "per_class_iou": {
+      "road": 0.9823153614997864,
+      "vehicle": 0.8070755004882812,
+      "building": 0.9416218400001526,
+      "pedestrian": 0.5708760023117065,
+      "sky": 0.9688313603401184
+    }
+  },
+  {
+    "epoch": 12,
+    "train_weighted_ce": 0.11063441802417079,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8562968373298645,
+    "val_pixel_accuracy": 0.9733944535255432,
+    "per_class_iou": {
+      "road": 0.9831146001815796,
+      "vehicle": 0.8076812624931335,
+      "building": 0.9434295296669006,
+      "pedestrian": 0.5754957795143127,
+      "sky": 0.9717628955841064
+    }
+  },
+  {
+    "epoch": 13,
+    "train_weighted_ce": 0.10569205199198056,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.859296441078186,
+    "val_pixel_accuracy": 0.9742605090141296,
+    "per_class_iou": {
+      "road": 0.9840559363365173,
+      "vehicle": 0.8127328157424927,
+      "building": 0.9450308084487915,
+      "pedestrian": 0.582202672958374,
+      "sky": 0.9724595546722412
+    }
+  },
+  {
+    "epoch": 14,
+    "train_weighted_ce": 0.10188120479385059,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8619622588157654,
+    "val_pixel_accuracy": 0.9744219779968262,
+    "per_class_iou": {
+      "road": 0.9839670658111572,
+      "vehicle": 0.8152539134025574,
+      "building": 0.9456034302711487,
+      "pedestrian": 0.5923498272895813,
+      "sky": 0.9726368188858032
+    }
+  },
+  {
+    "epoch": 15,
+    "train_weighted_ce": 0.1000306911125619,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8617927432060242,
+    "val_pixel_accuracy": 0.9747031927108765,
+    "per_class_iou": {
+      "road": 0.9845629334449768,
+      "vehicle": 0.8141787052154541,
+      "building": 0.9455832839012146,
+      "pedestrian": 0.5910869836807251,
+      "sky": 0.9735516905784607
+    }
+  },
+  {
+    "epoch": 16,
+    "train_weighted_ce": 0.09238263716300328,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8627058863639832,
+    "val_pixel_accuracy": 0.9748170971870422,
+    "per_class_iou": {
+      "road": 0.9838461875915527,
+      "vehicle": 0.8150947690010071,
+      "building": 0.9465343952178955,
+      "pedestrian": 0.594052255153656,
+      "sky": 0.974001944065094
+    }
+  },
+  {
+    "epoch": 17,
+    "train_weighted_ce": 0.08848903616589884,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8653659820556641,
+    "val_pixel_accuracy": 0.9752597212791443,
+    "per_class_iou": {
+      "road": 0.9844486117362976,
+      "vehicle": 0.818753719329834,
+      "building": 0.9470692873001099,
+      "pedestrian": 0.6022122502326965,
+      "sky": 0.9743462800979614
+    }
+  },
+  {
+    "epoch": 18,
+    "train_weighted_ce": 0.08802033408034232,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8664482235908508,
+    "val_pixel_accuracy": 0.9756075143814087,
+    "per_class_iou": {
+      "road": 0.9852436184883118,
+      "vehicle": 0.820695161819458,
+      "building": 0.9478148818016052,
+      "pedestrian": 0.6039855480194092,
+      "sky": 0.9745020270347595
+    }
+  },
+  {
+    "epoch": 19,
+    "train_weighted_ce": 0.08388351741176779,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8695751428604126,
+    "val_pixel_accuracy": 0.9763389229774475,
+    "per_class_iou": {
+      "road": 0.9852880239486694,
+      "vehicle": 0.8240116834640503,
+      "building": 0.9492403864860535,
+      "pedestrian": 0.6130656003952026,
+      "sky": 0.9762697219848633
+    }
+  },
+  {
+    "epoch": 20,
+    "train_weighted_ce": 0.08082414526612527,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8705106973648071,
+    "val_pixel_accuracy": 0.9765013456344604,
+    "per_class_iou": {
+      "road": 0.9858469367027283,
+      "vehicle": 0.8265406489372253,
+      "building": 0.9493311047554016,
+      "pedestrian": 0.6147797107696533,
+      "sky": 0.9760551452636719
+    }
+  },
+  {
+    "epoch": 21,
+    "train_weighted_ce": 0.0815213719603195,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8714035153388977,
+    "val_pixel_accuracy": 0.977029025554657,
+    "per_class_iou": {
+      "road": 0.9860743284225464,
+      "vehicle": 0.8284468054771423,
+      "building": 0.9502109289169312,
+      "pedestrian": 0.6152103543281555,
+      "sky": 0.9770748019218445
+    }
+  },
+  {
+    "epoch": 22,
+    "train_weighted_ce": 0.07793203965630582,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8720922470092773,
+    "val_pixel_accuracy": 0.9769702553749084,
+    "per_class_iou": {
+      "road": 0.9859199523925781,
+      "vehicle": 0.8291299343109131,
+      "building": 0.9504355788230896,
+      "pedestrian": 0.6180675625801086,
+      "sky": 0.9769084453582764
+    }
+  },
+  {
+    "epoch": 23,
+    "train_weighted_ce": 0.07827673027271866,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8730188608169556,
+    "val_pixel_accuracy": 0.9771625995635986,
+    "per_class_iou": {
+      "road": 0.9862100481987,
+      "vehicle": 0.8271818161010742,
+      "building": 0.9509968757629395,
+      "pedestrian": 0.6233233213424683,
+      "sky": 0.9773820042610168
+    }
+  },
+  {
+    "epoch": 24,
+    "train_weighted_ce": 0.07515812661218386,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8726803064346313,
+    "val_pixel_accuracy": 0.9771134257316589,
+    "per_class_iou": {
+      "road": 0.9862503409385681,
+      "vehicle": 0.828953206539154,
+      "building": 0.9504867792129517,
+      "pedestrian": 0.6207050085067749,
+      "sky": 0.9770064949989319
+    }
+  },
+  {
+    "epoch": 25,
+    "train_weighted_ce": 0.0756373532837437,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8752894401550293,
+    "val_pixel_accuracy": 0.9773796796798706,
+    "per_class_iou": {
+      "road": 0.9864047765731812,
+      "vehicle": 0.8313927054405212,
+      "building": 0.9512049555778503,
+      "pedestrian": 0.6305263042449951,
+      "sky": 0.9769183397293091
+    }
+  },
+  {
+    "epoch": 26,
+    "train_weighted_ce": 0.07183776327198552,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8749153017997742,
+    "val_pixel_accuracy": 0.9777165651321411,
+    "per_class_iou": {
+      "road": 0.9866193532943726,
+      "vehicle": 0.8312880396842957,
+      "building": 0.9517533779144287,
+      "pedestrian": 0.6265983581542969,
+      "sky": 0.9783176779747009
+    }
+  },
+  {
+    "epoch": 27,
+    "train_weighted_ce": 0.07206350520894092,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8755475878715515,
+    "val_pixel_accuracy": 0.9777485728263855,
+    "per_class_iou": {
+      "road": 0.9867792129516602,
+      "vehicle": 0.8313878774642944,
+      "building": 0.9516392946243286,
+      "pedestrian": 0.6304141879081726,
+      "sky": 0.9775172472000122
+    }
+  },
+  {
+    "epoch": 28,
+    "train_weighted_ce": 0.0699019232985153,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8754028677940369,
+    "val_pixel_accuracy": 0.9777485728263855,
+    "per_class_iou": {
+      "road": 0.9867441654205322,
+      "vehicle": 0.8292238712310791,
+      "building": 0.9515472054481506,
+      "pedestrian": 0.6315232515335083,
+      "sky": 0.9779755473136902
+    }
+  },
+  {
+    "epoch": 29,
+    "train_weighted_ce": 0.07002707883234947,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.875507652759552,
+    "val_pixel_accuracy": 0.9778626561164856,
+    "per_class_iou": {
+      "road": 0.986857533454895,
+      "vehicle": 0.8309049010276794,
+      "building": 0.9521065950393677,
+      "pedestrian": 0.6291061639785767,
+      "sky": 0.9785630702972412
+    }
+  },
+  {
+    "epoch": 30,
+    "train_weighted_ce": 0.06866963135619317,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8770065307617188,
+    "val_pixel_accuracy": 0.9781558513641357,
+    "per_class_iou": {
+      "road": 0.9868279695510864,
+      "vehicle": 0.8336394429206848,
+      "building": 0.9527994394302368,
+      "pedestrian": 0.6329359412193298,
+      "sky": 0.9788298010826111
+    }
+  },
+  {
+    "epoch": 31,
+    "train_weighted_ce": 0.07091739693636535,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8772088885307312,
+    "val_pixel_accuracy": 0.9781851172447205,
+    "per_class_iou": {
+      "road": 0.986889123916626,
+      "vehicle": 0.8338484168052673,
+      "building": 0.9528489112854004,
+      "pedestrian": 0.6336515545845032,
+      "sky": 0.9788068532943726
+    }
+  },
+  {
+    "epoch": 32,
+    "train_weighted_ce": 0.06867412954408636,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8776387572288513,
+    "val_pixel_accuracy": 0.9781659245491028,
+    "per_class_iou": {
+      "road": 0.9867109060287476,
+      "vehicle": 0.8341613411903381,
+      "building": 0.9531214237213135,
+      "pedestrian": 0.6352815628051758,
+      "sky": 0.9789184927940369
+    }
+  },
+  {
+    "epoch": 33,
+    "train_weighted_ce": 0.06816446496754565,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8781013488769531,
+    "val_pixel_accuracy": 0.9783594012260437,
+    "per_class_iou": {
+      "road": 0.9868409037590027,
+      "vehicle": 0.8356273174285889,
+      "building": 0.9534633159637451,
+      "pedestrian": 0.6352593302726746,
+      "sky": 0.9793158769607544
+    }
+  },
+  {
+    "epoch": 34,
+    "train_weighted_ce": 0.06935523129919524,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8772687911987305,
+    "val_pixel_accuracy": 0.9780833721160889,
+    "per_class_iou": {
+      "road": 0.9868080019950867,
+      "vehicle": 0.8335934281349182,
+      "building": 0.9526283144950867,
+      "pedestrian": 0.6350783705711365,
+      "sky": 0.9782360196113586
+    }
+  },
+  {
+    "epoch": 35,
+    "train_weighted_ce": 0.07005867165743664,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8782281875610352,
+    "val_pixel_accuracy": 0.9784005880355835,
+    "per_class_iou": {
+      "road": 0.9870020747184753,
+      "vehicle": 0.8342968225479126,
+      "building": 0.9532385468482971,
+      "pedestrian": 0.6374395489692688,
+      "sky": 0.9791635870933533
+    }
+  },
+  {
+    "epoch": 36,
+    "train_weighted_ce": 0.06730687674335255,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8774603009223938,
+    "val_pixel_accuracy": 0.9782419800758362,
+    "per_class_iou": {
+      "road": 0.9870035648345947,
+      "vehicle": 0.8330019116401672,
+      "building": 0.952818751335144,
+      "pedestrian": 0.6355871558189392,
+      "sky": 0.9788898825645447
+    }
+  },
+  {
+    "epoch": 37,
+    "train_weighted_ce": 0.06856469769952117,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8785389065742493,
+    "val_pixel_accuracy": 0.9784175157546997,
+    "per_class_iou": {
+      "road": 0.9869427680969238,
+      "vehicle": 0.8352766036987305,
+      "building": 0.953456699848175,
+      "pedestrian": 0.6378404498100281,
+      "sky": 0.9791779518127441
+    }
+  },
+  {
+    "epoch": 38,
+    "train_weighted_ce": 0.06795429554517551,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.878675639629364,
+    "val_pixel_accuracy": 0.9784674048423767,
+    "per_class_iou": {
+      "road": 0.986992597579956,
+      "vehicle": 0.8355693817138672,
+      "building": 0.9534931778907776,
+      "pedestrian": 0.6380454897880554,
+      "sky": 0.9792772531509399
+    }
+  },
+  {
+    "epoch": 39,
+    "train_weighted_ce": 0.0681735572795714,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8779778480529785,
+    "val_pixel_accuracy": 0.9782667756080627,
+    "per_class_iou": {
+      "road": 0.9869188070297241,
+      "vehicle": 0.8343551158905029,
+      "building": 0.9531277418136597,
+      "pedestrian": 0.6365329623222351,
+      "sky": 0.9789544939994812
+    }
+  },
+  {
+    "epoch": 40,
+    "train_weighted_ce": 0.06719416816548635,
+    "pedestrian_weight": 2.0,
+    "val_miou": 0.8777470588684082,
+    "val_pixel_accuracy": 0.9782936573028564,
+    "per_class_iou": {
+      "road": 0.9870026111602783,
+      "vehicle": 0.8332551717758179,
+      "building": 0.9530782103538513,
+      "pedestrian": 0.6362894177436829,
+      "sky": 0.9791098237037659
+    }
+  }
+]

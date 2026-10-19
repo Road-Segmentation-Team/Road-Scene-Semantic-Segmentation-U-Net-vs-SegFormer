@@ -2,7 +2,7 @@
 ## Milestone 2 — Second Approach and Initial Results
 **Date:** 19 October 2026  
 **Dataset:** CamVid (367 train / 101 validation / 233 test)  
-**Status:** Initial validation comparison and six qualitative visualizations completed; inference-time measurements pending.
+**Status:** Initial validation comparison and six qualitative visualizations completed; inference benchmark and a pedestrian-weighted loss follow-up completed; U-Net augmentation ablation pending.
 
 ### 1. New approach: SegFormer-B0
 
@@ -71,7 +71,7 @@ On image #008, pedestrian IoU is **0.000** for U-Net and **undefined (NaN)** for
 
 Overall, these examples are consistent with the validation-wide deficit on pedestrian and vehicle classes. They support a descriptive conclusion about lower overlap for those classes, but **do not prove** which architectural or training difference caused the gap. Large road and sky regions are consistently similar across the two predictions. There is no quantified inference-speed result yet.
 
-Figures are included as `output/val_008.png`, `val_042.png`, `val_043.png`, `val_063.png`, `val_074.png`, and `val_085.png`. For a concise milestone report, figures #042, #074, and #085 offer three clear examples of relevant differences; figure #008 is useful as a counterexample where SegFormer slightly exceeds U-Net on building for one frame.
+Figures are included as `submission_figures/val_008.png`, `val_042.png`, `val_043.png`, `val_063.png`, `val_074.png`, and `val_085.png`. For a concise milestone report, figures #042, #074, and #085 offer three clear examples of relevant differences; figure #008 is useful as a counterexample where SegFormer slightly exceeds U-Net on building for one frame.
 
 ### 7. Reproduction and next steps
 
@@ -86,3 +86,38 @@ python src/evaluate_segformer.py
 ```
 
 The test split must remain reserved for final evaluation, as required in the project plan. Qualitative findings above are based on the six supplied validation visualizations. Inference times and final test-set results have not yet been measured.
+
+### 7. CUDA inference benchmark
+
+Benchmarked on NVIDIA GeForce RTX 4060 Laptop GPU, PyTorch 2.11.0+cu128, FP32 batch size 1 and 480 × 360 input. The procedure used 20 warm-up passes and 100 timed iterations on the validation split. Timings include forward computation, full-resolution logits, and argmax; they exclude I/O and image preprocessing.
+
+| Benchmark | U-Net | SegFormer-B0 |
+|---|---:|---:|
+| Mean latency, ms/image | 13.158 | **10.627** |
+| Median latency, ms | 12.386 | **9.196** |
+| P95 latency, ms | 18.581 | **15.234** |
+| Derived FPS | 76.0 | **94.1** |
+| Parameters, million | 24.437 | **3.715** |
+| Peak allocated GPU memory, MiB | **196.1** | 239.4 |
+
+SegFormer-B0 is 19.2% lower in mean latency while U-Net is more accurate. The benchmark-specific GPU memory allocation is higher for SegFormer even though its model has fewer parameters.
+
+### 8. Controlled follow-up: pedestrian-weighted cross-entropy
+
+The initial SegFormer training was repeated with weight **2.0 for pedestrian pixels** and weight **1.0 for all other classes** in cross-entropy; void 255 remained excluded. The best of 40 validation-selected epochs was epoch 38.
+
+| Validation metric | Original SegFormer | Weighted SegFormer |
+|---|---:|---:|
+| Road | 0.9866 | 0.9870 |
+| Vehicle | 0.8324 | 0.8356 |
+| Building | 0.9525 | 0.9535 |
+| Pedestrian | 0.6036 | **0.6380** |
+| Sky | 0.9790 | 0.9793 |
+| **mIoU** | **0.8708** | **0.8787** |
+| Pixel accuracy | 0.9779 | 0.9785 |
+
+Pedestrian IoU increased by **3.44 percentage points** and mIoU by **0.79 points** compared with the original SegFormer checkpoint. Even with the modification, U-Net remains ahead. This is single-run evidence; repetitions with matched seeds would be necessary to estimate variability. The test split was not used.
+
+### 9. Planned next experiment
+
+A U-Net augmentation sensitivity experiment will remove horizontal flipping and brightness/contrast jitter while retaining resizing, ImageNet normalization, architecture, optimizer, learning-rate scheduler, and 40-epoch training budget. Its checkpoint will be stored separately to preserve the existing models. Because the original U-Net run did not explicitly fix a random seed, any observed difference should be reported as exploratory rather than solely caused by augmentation.
