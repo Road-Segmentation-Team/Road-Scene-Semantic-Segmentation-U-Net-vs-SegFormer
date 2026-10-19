@@ -94,13 +94,35 @@ class CamVidDataset(Dataset):
     def __len__(self):
         return len(self.ids)
 
+
     def __getitem__(self, i):
         name = self.ids[i]
-        image = cv2.cvtColor(cv2.imread(os.path.join(self.img_dir, name)), cv2.COLOR_BGR2RGB)
-        mask = cv2.cvtColor(cv2.imread(self._mask_path(name)), cv2.COLOR_BGR2RGB)
-        packed = ((mask[..., 0].astype(np.int32) << 16)
-                  | (mask[..., 1].astype(np.int32) << 8)
-                  | mask[..., 2].astype(np.int32))
+
+        # Read images safely from Unicode paths on Windows.
+        image_path = os.path.join(self.img_dir, name)
+        mask_path = self._mask_path(name)
+
+        image_bytes = np.fromfile(image_path, dtype=np.uint8)
+        mask_bytes = np.fromfile(mask_path, dtype=np.uint8)
+
+        image = cv2.imdecode(image_bytes, cv2.IMREAD_COLOR)
+        mask = cv2.imdecode(mask_bytes, cv2.IMREAD_COLOR)
+
+        if image is None:
+            raise RuntimeError(f"Failed to decode image: {image_path}")
+        if mask is None:
+            raise RuntimeError(f"Failed to decode mask: {mask_path}")
+
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        mask = cv2.cvtColor(mask, cv2.COLOR_BGR2RGB)
+
+        packed = (
+            (mask[..., 0].astype(np.int32) << 16)
+            | (mask[..., 1].astype(np.int32) << 8)
+            | mask[..., 2].astype(np.int32)
+        )
+
         target = self.lut[packed]
         out = self.transform(image=image, mask=target)
+
         return out["image"], out["mask"].long()
