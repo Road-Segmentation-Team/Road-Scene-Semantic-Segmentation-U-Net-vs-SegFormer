@@ -1,0 +1,14 @@
+{
+  "epoch": 38,
+  "train_weighted_ce": 0.06795429554517551,
+  "pedestrian_weight": 2.0,
+  "val_miou": 0.878675639629364,
+  "val_pixel_accuracy": 0.9784674048423767,
+  "per_class_iou": {
+    "road": 0.986992597579956,
+    "vehicle": 0.8355693817138672,
+    "building": 0.9534931778907776,
+    "pedestrian": 0.6380454897880554,
+    "sky": 0.9792772531509399
+  }
+}

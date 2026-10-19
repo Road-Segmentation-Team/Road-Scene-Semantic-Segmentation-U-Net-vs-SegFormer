@@ -25,6 +25,10 @@ def validate(model, loader, device):
 
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Training on: {device}")
+
+    if device == "cuda":
+        print(f"GPU: {torch.cuda.get_device_name(0)}")
     train_dl = DataLoader(CamVidDataset(ROOT, "train", TRAIN_TF),
                            batch_size=BATCH, shuffle=True, num_workers=2, pin_memory=True)
     val_dl = DataLoader(CamVidDataset(ROOT, "val", EVAL_TF), batch_size=BATCH, num_workers=2)
